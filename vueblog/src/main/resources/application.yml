@@ -1,0 +1,62 @@
+server:
+  port: 8081
+# DataSource Config
+#spring:
+  #datasource:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://101.34.143.156:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    #url: jdbc:mysql://localhost:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    #username: root
+    #password: lyh123
+
+
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+markerhub:
+  jwt:
+    #加密秘钥
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+    #token有效时期
+    expire: 300
+    header: Authorization
+
+  #shiro-redis:
+  # enabled: true
+    # redis-manager:
+    # host: redis:6379
+
+
+#自己的redis
+  #redis:
+  #database: 0
+#timeout: 0
+# Redis服务器地址
+#host: 127.0.0.1
+# Redis服务器连接端口
+#port: 6379
+# Redis服务器连接密码（默认为空）
+#password: root
+# 连接池最大连接数（使用负值表示没有限制）
+  #pool:
+  #max-active: 8
+# 连接池最大阻塞等待时间（使用负值表示没有限制）
+#max-wait: -1
+# 连接池中的最大空闲连接
+#max-idle: 8
+# 连接池中的最小空闲连接
+#min-idle: 0
+#isRedisCache: 1  #是否使用redis缓存
+
+
+
+
+#修改版使用redis
+#redis:
+ # host: localhost
+ # port: 6379
+ # jedis:
+ #   pool:
+  #    max-active: -1
+   #   max-wait: 3000ms
+  #timeout: 3000ms
